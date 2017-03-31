@@ -1,6 +1,6 @@
 #if(${users})
     #foreach(${user} in ${users})
-        ${user.NAME}<br>
+        ${user.id},${user.NAME}<br>
     #end
 #else
 目前没有数据!

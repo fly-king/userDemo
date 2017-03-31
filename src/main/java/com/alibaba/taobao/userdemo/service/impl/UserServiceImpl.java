@@ -25,6 +25,9 @@ public class UserServiceImpl implements UserService {
     public void addUser(User user) {
         this.userMapper.addUser(user.getNAME(),user.getAge());
     }
+    public void deleteUser(String userId){
+        this.userMapper.deleteUser(userId);
+    }
 
     public UserMapper getUserMapper() {
         return userMapper;
