@@ -25,7 +25,7 @@ public class UserController {
     @RequestMapping(value = "/showUser", method = RequestMethod.GET)
     public String showUser(@RequestParam("id") String id, ModelMap modelMap) throws IOException {
 
-        //1.调用BLL层的服务接口
+        //1.调用BLL层（Business Logic Layer）的服务接口
         User user = userService.getUser(id);
         //2.设置模型数据
         modelMap.put("user",user);
