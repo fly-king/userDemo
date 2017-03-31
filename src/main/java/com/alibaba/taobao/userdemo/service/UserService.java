@@ -1,5 +1,7 @@
 package com.alibaba.taobao.userdemo.service;
 
+import java.util.List;
+
 import com.alibaba.taobao.userdemo.model.User;
 
 /**
@@ -8,4 +10,10 @@ import com.alibaba.taobao.userdemo.model.User;
 public interface UserService {
 
     User getUser(String userId);
+
+    List<User> getAllUsers();
+
+    void addUser(User user);
+
+
 }

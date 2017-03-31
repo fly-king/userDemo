@@ -1,5 +1,7 @@
 package com.alibaba.taobao.userdemo.service.impl;
 
+import java.util.List;
+
 import com.alibaba.taobao.userdemo.mapper.UserMapper;
 import com.alibaba.taobao.userdemo.model.User;
 import com.alibaba.taobao.userdemo.service.UserService;
@@ -15,6 +17,13 @@ public class UserServiceImpl implements UserService {
 
     public User getUser(String userId) {
         return this.userMapper.getUser(userId);
+    }
+
+    public List<User> getAllUsers() {
+        return this.userMapper.getAllUsers();
+    }
+    public void addUser(User user) {
+        this.userMapper.addUser(user.getNAME(),user.getAge());
     }
 
     public UserMapper getUserMapper() {
