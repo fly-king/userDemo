@@ -7,6 +7,11 @@
 
     <mvc:annotation-driven/>
     <context:component-scan base-package="com.alibaba.taobao.userdemo"/>
+
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
+    <!-- 设置默认首页 -->
+    <mvc:view-controller path="/" view-name="/index.html"/>
+
     <!--规定模板文件的类型和位置-->
     <bean id="velocityConfigurer"
           class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
@@ -21,7 +26,7 @@
     <!--配置附加工具，以及将后缀为vm的文件交给下面的Resolver处理-->
     <bean id="velocityViewResolver"
           class="org.springframework.web.servlet.view.velocity.VelocityViewResolver">
-        <property name="suffix" value=".vm" />
+        <property name="suffix" value=".html" />
         <property name="contentType" value="text/html;charset=utf-8" />
     </bean>
 
