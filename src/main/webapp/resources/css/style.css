@@ -1124,3 +1124,6 @@ ul.meta-tags li:last-child:after { content: ' ' }
 .comment form { margin-top: -30px }
 .comment input,
 .comment textarea { margin-bottom: 15px }
+
+/* Video */
+video { max-width: 100%; height: auto; }
